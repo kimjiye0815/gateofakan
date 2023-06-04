@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GATE OF AKAN</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+    }
+
+    .main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+
+    .blink {
+      animation: blink-animation 1s steps(5, start) infinite;
+      -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+
+    .blink-dot {
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      top: 0;
+  animation: fade-in-out-animation 2s infinite;
+  -webkit-animation: fade-in-out-animation 2s infinite;
+}
+
+@keyframes fade-in-out-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-in-out-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .bubble {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 3s ease;
+      z-index: 3;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+
+    .t7 {
+      top: 50px;
+      left: 0px;
+    }
+
+    .t8 {
+      top: 550px;
+      left: 0px;
+    }
+
+    .t9 {
+      top: 1050px;
+      left: 0px;
+    }
+
+    .t10 {
+      top: 1500px;
+      left: 0px;
+    }
+
+    .t11 {
+      top: 2200px;
+      left: 0px;
+    }
+
+    footer {
+      width: 800px;
+      margin: auto;
+      color: white;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <img src="petal.gif" alt="투명화된 GIF 이미지">
+  </div>
+  <div class="main">
+    <img src="image2.png" alt="웹툰 이미지">
+     <a href="akan4.html"> <img class="blink-dot" src="dot2.png" alt="깜빡이는 점 이미지"></a>
+  <img class="bubble t7" src="t7.png" alt="말풍선 이미지">
+  <img class="bubble t8" src="t8.png" alt="말풍선 이미지">
+  <img class="bubble t9" src="t9.png" alt="말풍선 이미지">
+  <img class="bubble t10" src="t10.png" alt="말풍선 이미지">
+<img class="bubble t11" src="t11.png" alt="말풍선 이미지">
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var bubbles = document.querySelectorAll('.bubble');
+
+      for (var i = 0; i < bubbles.length; i++) {
+        var bubble = bubbles[i];
+        var positionFromTop = bubble.getBoundingClientRect().top;
+
+        if (positionFromTop - window.innerHeight <= 0) {
+          bubble.classList.add('fade-in');
+        }
+      }
+    });
+  </script>
+</body>
+<footer>
+  <p>© 2023 Gate of AKAN. All rights reserved.</p>
+</footer>
+</html>

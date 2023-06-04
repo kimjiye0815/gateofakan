@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GATE OF AKAN</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+    }
+
+    .parallax {
+      /* The image used */
+      background-image: url("image1-2.png");
+
+      /* Set a specific height */
+      min-height: 500px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center calc(50% - 0px); /* 중앙에서 50px 위로 이동 */
+      background-repeat: no-repeat;
+      background-size: contain;
+
+          max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      position: relative; /* 부모 요소를 relative로 설정 */
+      z-index: -1;
+    }
+
+  .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1; /* 투명도 조절 */
+    }
+
+    .main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      position: relative; /* 부모 요소를 relative로 설정 */
+      z-index: 2;
+    }
+
+
+      .cloud {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      position: relative; /* 부모 요소를 relative로 설정 */
+      z-index: 4;
+      top: 2000px;
+    }
+
+
+
+      .bird {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      position: relative; /* 부모 요소를 relative로 설정 */
+      z-index: 5;
+      top: 3000px;
+    }
+
+
+    .black {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      position: relative; /* 부모 요소를 relative로 설정 */
+      z-index: 0;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .bubble {
+      position: absolute; /* 절대 위치 설정 */
+      opacity: 0; /* 초기에 투명하게 설정 */
+      transition: opacity 3s ease; /* 투명도 변화에 대한 트랜지션 설정 */
+      z-index: 3;
+    }
+
+    .fade-in {
+      opacity: 1; /* 스크롤 시 투명도 1로 설정하여 나타나게 함 */
+    }
+
+    .rotate-container {
+      position: absolute;
+      top: 0;
+      left: 10;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1; /* light1.png를 배경 이미지 뒤로 보내기 위해 z-index 값을 -1로 설정 */
+    }
+
+    .rotate {
+      position: absolute;
+      top: 0px; /* 원하는 위치로 조정 */
+      left: 0%;
+      transform: translateX(-50%);
+      animation: rotation 15s linear infinite; /* 5초 동안 선형으로 무한 회전 애니메이션 적용 */
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .t1 {
+      top: 1150px;
+      left: 0px;
+    }
+
+    .t2 {
+      top: 1700px;
+      left: 0px;
+    }
+
+    .t3 {
+      top: 2000px;
+      left: 0px;
+    }
+
+    .t4 {
+      top: 2350px;
+      left: 0px;
+    }
+
+    .t5 {
+      top: 2800px;
+      left: 0px;
+    }
+
+    .t6 {
+      top: 3200px;
+      left: -20px;
+    }
+
+    /* 나머지 말풍선 이미지에 대한 위치 설정 */
+
+    footer {
+      width: 800px;
+      margin: auto;
+      color: white;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+ 
+    }
+  </style>
+</head>
+<body>
+       <a href="akan3.html"> <div class="overlay">
+    <img src="petal.gif" alt="투명화된 GIF 이미지">
+  </div>
+  <div class="parallax">
+    <div class="rotate-container">
+          <div class="black"><img src="black.png" alt="웹툰 이미지"></div>
+      <div class="rotate">
+        <img src="light1.png" alt="무한 회전 이미지">
+      </div>
+      </div>
+    <div class="main"><img src="image1.png" alt="웹툰 이미지"></div>
+     <a href="akan3.html"> <img class="bubble cloud" src="cloud.png" alt="구름"></a>
+        <a href="akan3.html"><img class="bubble bird" src="bird.png" alt="말풍선 이미지"></a>
+      <a href="akan3.html"><img class="bubble t1" src="t1.png" alt="말풍선 이미지"></a>
+      <a href="akan3.html"><img class="bubble t2" src="t2.png" alt="말풍선 이미지"></a>
+      <a href="akan3.html"><img class="bubble t3" src="t3.png" alt="말풍선 이미지"></a>
+      <a href="akan3.html"><img class="bubble t4" src="t4.png" alt="말풍선 이미지"></a>
+      <a href="akan3.html"><img class="bubble t5" src="t5.png" alt="말풍선 이미지"></a>
+   <a href="akan3.html"> <img class="bubble t6" src="t6.png" alt="말풍선 이미지"></a>
+  </div>
+</a>
+  <script>
+    window.addEventListener('scroll', function() {
+      var bubbles = document.querySelectorAll('.bubble');
+
+      for (var i = 0; i < bubbles.length; i++) {
+        var bubble = bubbles[i];
+        var positionFromTop = bubble.getBoundingClientRect().top;
+
+        if (positionFromTop - window.innerHeight <= 0) {
+          bubble.classList.add('fade-in');
+        }
+      }
+    });
+  </script>
+</body>
+<footer>
+     <a href="akan3.html"><p>© 2023 Gate of AKAN. All rights reserved.</p></a>
+</footer>
+</html>
